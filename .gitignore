@@ -1,0 +1,16 @@
+# 构建产物
+*.exe
+*.pdb
+*.dll
+
+# 运行时生成
+DisableVBS_日志.txt
+*.日志.txt
+
+# 内部资料，不公开
+_archive/
+验证记录.md
+
+# IDE
+.vs/
+*.user
