@@ -111,6 +111,39 @@ powershell -ExecutionPolicy Bypass -File .\build.ps1
 
 源码全部公开，可自行审计与编译。**建议在操作前创建系统还原点。**
 
+### 创建系统还原点
+
+`Win + S` 搜「创建还原点」→ 选中系统盘 → 「创建」→ 起名（如 `关闭VBS前`）。
+
+### 常见问题
+
+**杀软报毒？** 本版本完全开源、未加壳，理论上不应触发误报。若仍被拦截，可以用仓库里的 `build.ps1` 自行编译。
+
+**关闭后 PIN 要重设？** 这个属于系统设定。请您务必在运行前确保「设置 → 账户 → 登录选项」里确认有可用的密码登录方式，并关闭 Windows Hello。
+
+**日志里有几项「未成功」？** 若是 Hyper-V / IsolatedUserMode 相关那几项，属于家庭版的预期内现象，忽略即可。
+
+**重启后进了「自动修复 / WinRE」界面？** 在命令提示符里执行 `bcdedit /set hypervisorlaunchtype off`，然后重启；或走系统还原点还原。
+
+**关了 VBS 会不安全？** 是的，内存完整性用于阻止恶意驱动。正因为如此，本工具支持随时还原 —— 不用虚拟机时可以选菜单 `2` 还原回去。
+
+### 特别鸣谢
+
+- [kanren3](https://kanren3.github.io/posts/vbs-disable-failure-reason) —— 《浅谈 | Windows VBS 无法禁用的原因》一文中对 `winload.efi` 的逆向分析，是理解「为什么 `bcdedit /set hypervisorlaunchtype off` 会被忽略」的关键依据
+- [夜神模拟器](https://www.yeshen.com) —— 本工具的起点
+- [哔哩哔哩 @独醉科技](https://space.bilibili.com/1486110082)
+- 以及所有反馈问题、帮忙测试的朋友
+
+### 访问作者网站
+
+[点击此处](https://mybailu.cn/)
+
+### 免责声明
+
+本工具会修改系统启动配置与安全设置。尽管发布前已多次测试，作者仍不对由此造成的任何系统异常或数据丢失负责。**请务必先创建系统还原点。**
+
+### 反馈问题时，请带上系统版本号（`winver`），谢谢
+
 ### 许可
 
 MIT License，见 [LICENSE](LICENSE)。
