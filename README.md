@@ -3,6 +3,10 @@
 关闭 / 还原 Windows 的 **VBS（基于虚拟化的安全）** 与 **内存完整性（HVCI）**，带图形界面与执行日志。
 A GUI tool to disable or restore **Virtualization-Based Security (VBS)** and **HVCI** on Windows.
 
+[![Release](https://img.shields.io/github/v/release/HOSHINO61/DisableVBS?include_prereleases&label=release)](https://github.com/HOSHINO61/DisableVBS/releases)
+[![License](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%2010%20%7C%2011-lightgrey)](https://github.com/HOSHINO61/DisableVBS)
+
 > ⚠️ **本版本为测试版，不代表最终品质。**
 > This is a **beta build**. Use at your own risk.
 
