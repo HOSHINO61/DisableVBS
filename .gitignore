@@ -2,6 +2,7 @@
 *.exe
 *.pdb
 *.dll
+CSC*.TMP
 
 # 运行时生成
 DisableVBS_日志.txt
